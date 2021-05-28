@@ -80,21 +80,17 @@ pip install http.client
 ```
 
 7.  Run the program `main`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
-
-
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Automating dial peer  preferences assignment. Lower rates of calling incured as the dial peer will be configured to use the prefernces with the least cost. 
 
 ## Code Samples
 ### DB connect function
 
-`  def dbconnect(self, server=None):
+```
+def dbconnect(self, server=None):
         server = "10.244.0.5"
         database = "DevNet"
         tcon = "yes"
@@ -103,7 +99,7 @@ Use this space to show useful examples of how a project can be used. Additional 
         conn = pyodbc.connect(driver='{SQL Server Native Client 11.0}', host=server, database=database,
                               user=uname, password=pword)
         self.connection = conn
-`
+```
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
