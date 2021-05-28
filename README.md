@@ -36,7 +36,7 @@ Reduce cost of calling charges by routing to use the dial peer that has the fair
 
 ### Built With
 
-* Python
+* Python 3.9
 
 ### Libraries
 * Paramiko
@@ -51,11 +51,12 @@ To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
 
-Install the following libraries
-* npm
+Install the following libraries 
+ pip 
   ```sh
-  npm install npm@latest -g
+ pip install pip --upgrade --user
   ```
+
 
 ### Installation
 
@@ -76,7 +77,9 @@ Install the following libraries
                               user=uname, password=pword)
    ```
 4. Install paramiko 
-`` pip install paramiko``
+```sh
+pip install paramiko
+```
 6.  Enter your API in `config.js`
    ```JS
    const API_KEY = 'ENTER YOUR API';
