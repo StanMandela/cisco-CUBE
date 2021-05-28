@@ -67,15 +67,17 @@ Install the following libraries
 
    ```sh
    def dbconnect(self, server=None):
-        server = "Ip Adress"
-        database = "Database Name"
+        server = "Ip Address"
+        database = "****"
         tcon = "yes"
-        uname = "user"
-        pword = "Password if"
+        uname = "****"
+        pword = " *****"
         conn = pyodbc.connect(driver='{SQL Server Native Client 11.0}', host=server, database=database,
                               user=uname, password=pword)
    ```
-4. Enter your API in `config.js`
+4. Install paramiko 
+`` pip install paramiko``
+6.  Enter your API in `config.js`
    ```JS
    const API_KEY = 'ENTER YOUR API';
    ```
@@ -121,7 +123,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
 Project Link: [https://github.com/finsysadmin/Cisco-CUBE](https://github.com/finsysadmin/Cisco-CUBE)
 
