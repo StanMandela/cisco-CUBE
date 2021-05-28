@@ -100,7 +100,23 @@ def dbconnect(self, server=None):
                               user=uname, password=pword)
         self.connection = conn
 ```
+### Write config to cisco device
+```
+ def write_config(self):
+        preference = 0
+        for dial_peer in self.preferences:
+            # Create dial peer
+            peer = str(1) + str(dial_peer.AREA) + str(dial_peer.SPCODE) + str(dial_peer.GW)
+            # write dial peer and preference
+            self.connection.send("dial-peer voice " + peer + " voip\n")  # dial-peer voice 1 254 3 voip
+            self.connection.send("preference " + str(preference) + "\n")  # preference 0
+            preference = preference + 1
+            time.sleep(1)
 
+        router_output = self.connection.recv(65535)
+        # Test for reading command output
+        print(str(router_output) + "\n")
+ ```
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 
@@ -146,13 +162,7 @@ Project Link: [https://github.com/finsysadmin/Cisco-CUBE](https://github.com/fin
 * [Img Shields](https://shields.io)
 * [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
+
 
 
 
