@@ -75,7 +75,7 @@ pip install paramiko
 pip install pydoc
 ```
 6.install http client library
-```sh
+```py
 pip install http.client
 ```
 
